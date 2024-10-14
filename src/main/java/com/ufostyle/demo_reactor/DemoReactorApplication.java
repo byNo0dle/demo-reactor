@@ -16,6 +16,7 @@ public class DemoReactorApplication implements CommandLineRunner {
 	//Using Subscribe Method
 	public void reactor() {
 		Mono.just(new Person(1, "Jostin", "Martinez", 24))
+				.doOnNext(person -> log.info("[Reactor] Person: " + person))
 				.subscribe(person -> log.info("[Reactor] Person: " + person));
 	}
 
