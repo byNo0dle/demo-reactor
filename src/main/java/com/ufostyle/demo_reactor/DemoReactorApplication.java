@@ -1,5 +1,6 @@
 package com.ufostyle.demo_reactor;
 
+import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
 import com.ufostyle.demo_reactor.domain.model.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,6 +61,9 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//reactor();
 		//mono();
 		//flux();
-		fluxMono();
+		//fluxMono();
+		Creation app = new Creation();
+		//app.range();
+		app.repeat();
 	}
 }
