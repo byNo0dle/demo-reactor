@@ -2,6 +2,7 @@ package com.ufostyle.demo_reactor;
 
 import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
 import com.ufostyle.demo_reactor.domain.model.Person;
+import com.ufostyle.demo_reactor.domain.transformation_operator.Transformation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -62,8 +63,9 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//mono();
 		//flux();
 		//fluxMono();
-		Creation app = new Creation();
+		Transformation app = new Transformation();
 		//app.range();
-		app.repeat();
+		//app.flatMap();
+		app.groupBy();
 	}
 }
