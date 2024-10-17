@@ -2,6 +2,8 @@ package com.ufostyle.demo_reactor.domain.model;
 
 import lombok.*;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -12,4 +14,17 @@ public class Person {
     private String firstName;
     private String lastName;
     private Integer age;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return Objects.equals(idPerson, person.idPerson);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(idPerson);
+    }
 }
