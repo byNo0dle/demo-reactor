@@ -3,6 +3,7 @@ package com.ufostyle.demo_reactor;
 import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
 import com.ufostyle.demo_reactor.domain.filtered_operator.Filtered;
 import com.ufostyle.demo_reactor.domain.model.Person;
+import com.ufostyle.demo_reactor.domain.operator_combination.Combination;
 import com.ufostyle.demo_reactor.domain.transformation_operator.Transformation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -64,13 +65,17 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//mono();
 		//flux();
 		//fluxMono();
-		Filtered app = new Filtered();
+		//Filtered app = new Filtered();
 		//app.range();
 		//app.flatMap();
 		//app.groupBy();
 		//app.filter();
 		//app.distinct();
-		//app.take();
-		app.skipLast();
+		//app.takeLast();
+		//app.skipLast();
+		Combination app = new Combination();
+		//app.merge();
+		//app.zip();
+		app.zipWith();
 	}
 }
