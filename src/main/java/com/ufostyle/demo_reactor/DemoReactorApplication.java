@@ -1,6 +1,7 @@
 package com.ufostyle.demo_reactor;
 
 import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
+import com.ufostyle.demo_reactor.domain.error_operator.ErrorOperator;
 import com.ufostyle.demo_reactor.domain.filtered_operator.Filtered;
 import com.ufostyle.demo_reactor.domain.model.Person;
 import com.ufostyle.demo_reactor.domain.operator_combination.Combination;
@@ -73,9 +74,14 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//app.distinct();
 		//app.takeLast();
 		//app.skipLast();
-		Combination app = new Combination();
+		//ombination app = new Combination();
 		//app.merge();
 		//app.zip();
-		app.zipWith();
+		//app.zipWith();
+		ErrorOperator app = new ErrorOperator();
+		//app.retry();
+		//app.errorReturn();
+		//app.errorResume();
+		app.errorMap();
 	}
 }
