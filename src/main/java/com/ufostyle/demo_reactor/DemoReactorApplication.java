@@ -4,6 +4,7 @@ import com.ufostyle.demo_reactor.domain.conditional_operator.Conditional;
 import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
 import com.ufostyle.demo_reactor.domain.error_operator.ErrorOperator;
 import com.ufostyle.demo_reactor.domain.filtered_operator.Filtered;
+import com.ufostyle.demo_reactor.domain.mathematical_operator.Mathematical;
 import com.ufostyle.demo_reactor.domain.model.Person;
 import com.ufostyle.demo_reactor.domain.operator_combination.Combination;
 import com.ufostyle.demo_reactor.domain.transformation_operator.Transformation;
@@ -84,7 +85,9 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//app.errorReturn();
 		//app.errorResume();
 		//app.errorMap();
-		Conditional app = new Conditional();
-		app.timeOut();
+		//Conditional app = new Conditional();
+		//app.timeOut();
+		Mathematical app = new Mathematical();
+		app.summarizing();
 	}
 }
