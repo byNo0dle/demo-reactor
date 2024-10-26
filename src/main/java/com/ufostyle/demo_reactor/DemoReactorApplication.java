@@ -1,5 +1,6 @@
 package com.ufostyle.demo_reactor;
 
+import com.ufostyle.demo_reactor.domain.conditional_operator.Conditional;
 import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
 import com.ufostyle.demo_reactor.domain.error_operator.ErrorOperator;
 import com.ufostyle.demo_reactor.domain.filtered_operator.Filtered;
@@ -78,10 +79,12 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//app.merge();
 		//app.zip();
 		//app.zipWith();
-		ErrorOperator app = new ErrorOperator();
+		//ErrorOperator app = new ErrorOperator();
 		//app.retry();
 		//app.errorReturn();
 		//app.errorResume();
-		app.errorMap();
+		//app.errorMap();
+		Conditional app = new Conditional();
+		app.timeOut();
 	}
 }
