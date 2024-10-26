@@ -1,6 +1,6 @@
 package com.ufostyle.demo_reactor.domain.error_operator;
 
-import com.ufostyle.demo_reactor.domain.model.Person;
+import com.ufostyle.demo_reactor.domain.models.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import reactor.core.publisher.Flux;

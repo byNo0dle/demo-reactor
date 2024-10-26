@@ -1,4 +1,4 @@
-package com.ufostyle.demo_reactor.domain.model;
+package com.ufostyle.demo_reactor.domain.models;
 
 import lombok.*;
 

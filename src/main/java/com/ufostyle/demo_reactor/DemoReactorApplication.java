@@ -1,13 +1,7 @@
 package com.ufostyle.demo_reactor;
 
-import com.ufostyle.demo_reactor.domain.conditional_operator.Conditional;
-import com.ufostyle.demo_reactor.domain.creation_operator.Creation;
-import com.ufostyle.demo_reactor.domain.error_operator.ErrorOperator;
-import com.ufostyle.demo_reactor.domain.filtered_operator.Filtered;
 import com.ufostyle.demo_reactor.domain.mathematical_operator.Mathematical;
-import com.ufostyle.demo_reactor.domain.model.Person;
-import com.ufostyle.demo_reactor.domain.operator_combination.Combination;
-import com.ufostyle.demo_reactor.domain.transformation_operator.Transformation;
+import com.ufostyle.demo_reactor.domain.models.Person;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -20,9 +14,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
-public class DemoReactorApplication implements CommandLineRunner {
+public class DemoReactorApplication /*implements CommandLineRunner*/ {
+	public static void main(String[] args) {
+		SpringApplication.run(DemoReactorApplication.class, args);
+	}
 
-	private static final Logger log = LoggerFactory.getLogger(DemoReactorApplication.class);
+	/*private static final Logger log = LoggerFactory.getLogger(DemoReactorApplication.class);
 
 	//Using Subscribe Method
 	public void reactor() {
@@ -56,13 +53,9 @@ public class DemoReactorApplication implements CommandLineRunner {
 
 		Flux<Person> fx = Flux.fromIterable(persons);
 		fx.collectList().subscribe(listPerson -> log.info(listPerson.toString()));
-	}
+	}*/
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoReactorApplication.class, args);
-	}
-
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 		//reactor();
 		//mono();
@@ -89,5 +82,5 @@ public class DemoReactorApplication implements CommandLineRunner {
 		//app.timeOut();
 		Mathematical app = new Mathematical();
 		app.summarizing();
-	}
+	}*/
 }
